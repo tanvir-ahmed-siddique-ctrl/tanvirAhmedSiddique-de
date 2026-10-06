@@ -9,7 +9,7 @@ A bilingual, browser-only workspace that helps office staff check, arrange, and 
 
 [Open the GitHub Pages deployment](https://tanvir-ahmed-siddique-ctrl.github.io/devfest-24201056-tanvirahmedsiddique/)
 
-If the link is not live yet, enable **Settings → Pages → Source: GitHub Actions** once, then rerun the deployment workflow.
+The deployment workflow configures GitHub Pages and publishes the verified production build automatically.
 
 ## 60-second judge tour
 
@@ -78,7 +78,7 @@ Core rule evaluation is isolated from React in `src/engine/compliance.ts`. Displ
 
 - The generated cover is English as required. Bangla cover text is not included.
 - Optional index, signature placement, CSV export, and project save/reopen are not included.
-- The public Pages link requires the repository owner to enable GitHub Actions as the Pages source once.
+- GitHub Pages may take a short time to become available after the first successful workflow run.
 
 ## AI use
 

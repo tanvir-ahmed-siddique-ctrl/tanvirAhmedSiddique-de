@@ -32,3 +32,9 @@
 - Prompt: "Move the verified project to the registration-number repository, commit all current work now, and use a polished faithful prompt in the commit."
 - Changed: added participant identity and registration number, updated the Pages URL, and switched the Git remote to the correctly named competition repository.
 - Verified: full test/build gate and the new remote push are checked before handoff.
+
+## First Pages enablement
+
+- Prompt: "Finish and publish the complete project in the correctly named competition repository."
+- Changed: allowed the official Pages configuration action to enable Pages automatically on the repository's first deployment.
+- Verified: install, tests, and production build passed on GitHub; only the previously disabled Pages setting blocked the first run.
