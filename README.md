@@ -2,11 +2,12 @@
 
 A bilingual, browser-only workspace that helps office staff check, arrange, and combine tender documents into a correctly ordered submission PDF. Files never leave the user's browser.
 
-> Participant registration number: **not yet provided**
+**Participant:** Tanvir Ahmed Siddique  
+**Registration:** 24201056
 
 ## Live site
 
-[Open the GitHub Pages deployment](https://tanvir-ahmed-siddique-ctrl.github.io/tanvirAhmedSiddique-de/)
+[Open the GitHub Pages deployment](https://tanvir-ahmed-siddique-ctrl.github.io/devfest-24201056-tanvirahmedsiddique/)
 
 If the link is not live yet, enable **Settings → Pages → Source: GitHub Actions** once, then rerun the deployment workflow.
 
