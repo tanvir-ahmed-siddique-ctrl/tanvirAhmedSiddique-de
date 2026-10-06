@@ -38,3 +38,10 @@
 - Prompt: "Finish and publish the complete project in the correctly named competition repository."
 - Changed: allowed the official Pages configuration action to enable Pages automatically on the repository's first deployment.
 - Verified: install, tests, and production build passed on GitHub; only the previously disabled Pages setting blocked the first run.
+
+## Submission repository correction
+
+- Prompt: "Finish the remaining work except deployment. Push to the earlier repository https://github.com/tanvir-ahmed-siddique-ctrl/tanvirAhmedSiddique-de and stop using the newer repository. The agent kit appears in a commit from before the contest start, so remove it from the project."
+- Changed: stopped tracking `agent.md`, pointed the documented repository at the earlier GitHub remote, and removed the unverified live-site claim.
+- Verified: the agent kit is absent from the latest tree. It remains inside the already published first commit `0f32729`.
+- Decision: did not rewrite or force-push history, because altered history is itself a contest violation.

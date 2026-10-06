@@ -20,8 +20,8 @@
 | D01 | Correct sample output under `output/` | DELIVERABLE | 16-page structure check + render inspection | Done |
 | D02 | Status screenshot under `screenshots/` | DELIVERABLE | `screenshots/document-statuses.png` inspected | Done |
 | D03 | README and MIT license | DELIVERABLE | repository audit | Done |
-| D04 | Public HTTPS deployment matching final commit | DELIVERABLE | incognito judge path | Blocked: remote missing |
-| B01 | Filename auto-match suggestions | BONUS | unit + judge path | Not started |
+| D04 | Public HTTPS deployment matching final commit | DELIVERABLE | incognito judge path | Not deployed |
+| B01 | Filename auto-match suggestions | BONUS | safe suggestions refuse ambiguous names | Done |
 | B02 | Index page | BONUS | PDF structure test | Not started |
 | B03 | CSV checklist export | BONUS | content test | Not started |
 | B04 | Save and reopen work | BONUS | reload test | Not started |

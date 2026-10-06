@@ -5,11 +5,13 @@ A bilingual, browser-only workspace that helps office staff check, arrange, and 
 **Participant:** Tanvir Ahmed Siddique  
 **Registration:** 24201056
 
+## Repository
+
+https://github.com/tanvir-ahmed-siddique-ctrl/tanvirAhmedSiddique-de
+
 ## Live site
 
-[Open the GitHub Pages deployment](https://tanvir-ahmed-siddique-ctrl.github.io/devfest-24201056-tanvirahmedsiddique/)
-
-The deployment workflow configures GitHub Pages and publishes the verified production build automatically.
+The public site is not published yet. Deployment was left for a later step, so this repository does not claim a live link.
 
 ## 60-second judge tour
 
@@ -78,7 +80,7 @@ Core rule evaluation is isolated from React in `src/engine/compliance.ts`. Displ
 
 - The generated cover is English as required. Bangla cover text is not included.
 - Optional index, signature placement, CSV export, and project save/reopen are not included.
-- GitHub Pages may take a short time to become available after the first successful workflow run.
+- The public website has not been deployed.
 
 ## AI use
 
