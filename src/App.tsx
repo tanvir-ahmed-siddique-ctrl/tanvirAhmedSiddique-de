@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   duplicateFileIds,
   getMatchConflict,
@@ -43,6 +43,7 @@ export default function App() {
   const [generating, setGenerating] = useState(false)
   const requirementsInput = useRef<HTMLInputElement>(null)
   const documentsInput = useRef<HTMLInputElement>(null)
+  const sampleLoadedFromUrl = useRef(false)
   const t = copy[language]
 
   const duplicateIds = useMemo(() => duplicateFileIds(files), [files])
@@ -56,6 +57,12 @@ export default function App() {
     if (!data) return new Map<string, string>()
     return new Map(files.map((file) => [file.id, suggestRequirement(file.name, data.requirements)]).filter((pair): pair is [string, string] => Boolean(pair[1])))
   }, [data, files])
+
+  useEffect(() => {
+    if (sampleLoadedFromUrl.current || new URLSearchParams(window.location.search).get('sample') !== '1') return
+    sampleLoadedFromUrl.current = true
+    void loadSample()
+  }, [])
 
   async function loadRequirementsFile(file: File) {
     try {
@@ -158,9 +165,18 @@ export default function App() {
   function applySuggestions() {
     if (!data) return
     const next = { ...matches }
+    const suggestionCounts = new Map<string, number>()
+    suggestions.forEach((requirementId) => {
+      suggestionCounts.set(requirementId, (suggestionCounts.get(requirementId) ?? 0) + 1)
+    })
     for (const file of files) {
       const requirementId = suggestions.get(file.id)
-      if (!requirementId || next[requirementId]) continue
+      if (
+        !requirementId ||
+        next[requirementId] ||
+        suggestionCounts.get(requirementId) !== 1 ||
+        duplicateIds.has(file.id)
+      ) continue
       if (!getMatchConflict(requirementId, file.id, next, files)) next[requirementId] = file.id
     }
     setMatches(next)

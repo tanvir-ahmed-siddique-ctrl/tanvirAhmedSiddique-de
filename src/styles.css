@@ -26,7 +26,7 @@ button:disabled { cursor: not-allowed; opacity: .52; }
 .app-shell { min-height: 100vh; background: radial-gradient(circle at 88% 0%, #e0eee4 0, transparent 28rem), #f4f2ec; }
 .topbar { min-height: 72px; padding: 12px clamp(20px, 4vw, 64px); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(18,63,56,.14); background: rgba(255,254,251,.88); backdrop-filter: blur(14px); position: sticky; top: 0; z-index: 10; }
 .brand-lockup { display: flex; gap: 12px; align-items: center; }
-.brand-mark { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; background: var(--green); color: white; font-weight: 800; }
+.brand-mark { width: 40px; height: 40px; flex: 0 0 40px; display: grid; place-items: center; border-radius: 12px; background: var(--green); color: white; font-weight: 800; }
 .brand-lockup strong, .brand-lockup span { display: block; }
 .brand-lockup strong { font-size: 15px; }
 .brand-lockup span { margin-top: 2px; color: var(--muted); font-size: 11px; }
@@ -128,6 +128,10 @@ main { width: min(1480px, calc(100% - 40px)); margin: 0 auto; padding: 50px 0 12
   .generate-bar { align-items: stretch; flex-direction: column; }
   .generate-button { width: 100%; }
   .generate-bar p { white-space: normal; }
+}
+
+@media (max-width: 470px) {
+  .brand-lockup > div { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

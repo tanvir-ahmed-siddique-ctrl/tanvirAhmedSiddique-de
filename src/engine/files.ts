@@ -54,7 +54,7 @@ export async function inspectPdf(file: File): Promise<UploadedPdf> {
       hash: await sha256(file),
       thumbnail,
     }
-    await document.destroy()
+    await loadingTask.destroy()
     return result
   } catch (error) {
     if (error instanceof FileProcessingError) throw error

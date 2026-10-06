@@ -2,24 +2,24 @@
 
 | ID | Requirement | Type | Verification | Status |
 |---|---|---|---|---|
-| M01 | Load and validate requirements JSON | MUST | schema tests + judge path | Not started |
-| M02 | Sort requirements by numeric `order` | RULE | unit test | Not started |
-| M03 | Upload multiple PDFs, page count, removal | MUST | integration test | Not started |
-| M04 | Reject non-PDF, damaged, and encrypted files safely | MUST/BONUS | integration test | Not started |
-| M05 | Enforce one-file/one-requirement matching | RULE | unit test | Not started |
-| M06 | Capture expiry dates for applicable matches | MUST | unit test + judge path | Not started |
-| M07 | Compute exact five statuses immediately | STRING/RULE | unit tests S01-S06 | Not started |
-| M08 | Detect byte-identical duplicates | MUST | unit test S07 | Not started |
-| M09 | Disable Generate and explain every blocker | UX | judge path | Not started |
-| M10 | Generate English cover with all required fields | MUST | PDF structure test | Not started |
-| M11 | Merge all pages in requirement order | RULE | PDF structure test | Not started |
-| M12 | Add readable non-overlapping footer to every page | MUST | render + structure test | Not started |
-| M13 | Download `<tender_id>_Package.pdf` | STRING | integration test | Not started |
-| M14 | Complete Bangla/English UI | MUST/UX | language audit | Not started |
-| L01 | Maximum 30 files and 50 MB total | LIMIT | boundary tests | Not started |
-| D01 | Correct sample output under `output/` | DELIVERABLE | open/render/inspect | Not started |
-| D02 | Status screenshot under `screenshots/` | DELIVERABLE | visual inspection | Not started |
-| D03 | README and MIT license | DELIVERABLE | repository audit | Not started |
+| M01 | Load and validate requirements JSON | MUST | 12-test suite + browser judge path | Done |
+| M02 | Sort requirements by numeric `order` | RULE | `sorts by the order field` test | Done |
+| M03 | Upload multiple PDFs, page count, removal | MUST | sample browser flow | Done |
+| M04 | Reject non-PDF, damaged, and encrypted files safely | MUST/BONUS | sample PNG rejection + guarded PDF parser | Done |
+| M05 | Enforce one-file/one-requirement matching | RULE | duplicate/reuse tests | Done |
+| M06 | Capture expiry dates for applicable matches | MUST | status tests + browser UI | Done |
+| M07 | Compute exact five statuses immediately | STRING/RULE | unit tests S01-S06 | Done |
+| M08 | Detect byte-identical duplicates | MUST | SHA-256 browser flow + unit test S07 | Done |
+| M09 | Disable Generate and explain every blocker | UX | sample browser flow | Done |
+| M10 | Generate English cover with all required fields | MUST | sample PDF generation | Done |
+| M11 | Merge all pages in requirement order | RULE | 16-page sample assertion | Done |
+| M12 | Add readable non-overlapping footer to every page | MUST | reserved strip; pages 1, 2, 3, 16 rendered and inspected | Done |
+| M13 | Download `<tender_id>_Package.pdf` | STRING | browser implementation | Done |
+| M14 | Complete Bangla/English UI | MUST/UX | browser language audit including statuses/errors | Done |
+| L01 | Maximum 30 files and 50 MB total | LIMIT | exact-boundary tests | Done |
+| D01 | Correct sample output under `output/` | DELIVERABLE | 16-page structure check + render inspection | Done |
+| D02 | Status screenshot under `screenshots/` | DELIVERABLE | `screenshots/document-statuses.png` inspected | Done |
+| D03 | README and MIT license | DELIVERABLE | repository audit | Done |
 | D04 | Public HTTPS deployment matching final commit | DELIVERABLE | incognito judge path | Blocked: remote missing |
 | B01 | Filename auto-match suggestions | BONUS | unit + judge path | Not started |
 | B02 | Index page | BONUS | PDF structure test | Not started |
